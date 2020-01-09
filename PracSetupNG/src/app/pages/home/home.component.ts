@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from 'src/app/student';
 
 @Component({
   selector: 'app-home',
@@ -6,18 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  trash = [
+  trash: Student[] =[
     {
-      title: 'My project 1', desc: 'trash', nFO:'something'
+      fName: 'jon',
+      lName: 'stewart',
+      sName: 'jonstewart',
+      pNumber: 4444444
+
     },
     {
-      title: 'My project 2', desc: 'trash 2', nFO:'something 2'
-    },
-    {
-      title: 'My project 3', desc: 'trash 2', nFO:'something 3'
+      fName: 'lourn',
+      lName: 'selga',
+      sName: 'louuurrnnn',
+      pNumber: 4444444
+
     }
-    
   ];
+
   constructor() { }
 
   ngOnInit() {
