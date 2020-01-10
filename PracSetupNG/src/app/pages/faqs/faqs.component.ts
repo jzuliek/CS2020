@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { on } from 'cluster';
 
 @Component({
   selector: 'app-faqs',
