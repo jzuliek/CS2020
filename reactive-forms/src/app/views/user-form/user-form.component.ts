@@ -32,6 +32,15 @@ export class UserFormComponent implements OnInit {
       hasMiddleName: false
     });
     
+    this.userForm.get('hasMiddleName').valueChanges.subscribe(value => {
+      if(value){
+        this.mName.clearValidators();
+
+      }else{
+        this.mName.setValidators([Validators.required]);
+      }
+      this.mName.updateValueAndValidity();
+    });
   }
 
   myUser = {fName: 'Johnny', lName: 'Uribe', mName: 'secret', hasMiddleName: true};
@@ -54,6 +63,16 @@ export class UserFormComponent implements OnInit {
     this.userForm.patchValue({
       fName: 'Casey'
     });
+
+  }
+  submitForm() {
+    if(this.userForm.invalid){
+      alert('fixed errors ');
+    }
+        else{
+          alert('success');
+          console.log(this.userForm);
+    }
   }
 
 }
