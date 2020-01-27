@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { Products } from '../interfaces/products';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-desc',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDescComponent implements OnInit {
 
-  constructor() { }
+  product: Products;
+
+  constructor(private dservice: DataService, private route: ActivatedRoute
+    ) { }
+
 
   ngOnInit() {
+
+    const id = this.route.snapshot.paramMap.get('id');
+
+    //grab id 
+    this.getProduct(id);
   }
 
+  getProduct(sku: string){
+
+    console.log(sku);
+
+    this.dservice.getItem(sku).subscribe(
+      x => this.product = x
+    )
+
+  }
 }
