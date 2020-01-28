@@ -19,17 +19,20 @@ export class ProductDescComponent implements OnInit {
   ngOnInit() {
 
     const id = this.route.snapshot.paramMap.get('id');
+    const productName = this.route.snapshot.paramMap.get('productName');
 
     //grab id 
     this.getProduct(id);
   }
-
+  
   getProduct(sku: string){
-
+    
     console.log(sku);
 
     this.dservice.getItem(sku).subscribe(
       x => this.product = x
+
+      
     )
 
   }

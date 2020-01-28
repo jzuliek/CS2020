@@ -60,7 +60,7 @@ export class DataService {
   getItem( id:string ): Observable <Products> {
 
     return  of( this.products.find(
-      products => products.id === id
+      x => x.id === id
     ));
 
   }
