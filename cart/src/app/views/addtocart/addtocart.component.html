@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row" *ngFor = "let cItem of cartItems">
+        
+        <div class="col">
+            Put Image here
+        </div>
+        <div class="col">
+            <li class="list-group-item">{{cItem.pName}}</li>
+        </div>
+        <div class="col">
+            <a>{{cItem.price}}</a>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-info">Info</button>
+
+        </div>
+    </div>
+</div>
