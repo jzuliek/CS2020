@@ -14,7 +14,8 @@ export class DataService {
       productNameURL: 'yep',
       productDescription: 'yep is gross',
       additionalInfo: 'yep smells',
-      price: '$1'
+      price: '1',
+      quantity: 0
     },
     {
       id: '2',
@@ -22,7 +23,8 @@ export class DataService {
       productNameURL: 'yepp',
       productDescription: 'yepp is gross',
       additionalInfo: 'yepp smells',
-      price: '$2'
+      price: '2',
+      quantity: 0
     },
     {
       id: '3',
@@ -30,7 +32,8 @@ export class DataService {
       productNameURL: 'yeppp',
       productDescription: 'yeppp is gross',
       additionalInfo: 'yeppp smells',
-      price: '$3'
+      price: '3',
+      quantity: 0
     },
     {
       id: '4',
@@ -38,7 +41,8 @@ export class DataService {
       productNameURL: 'yepppp',
       productDescription: 'yepppp is gross',
       additionalInfo: 'yepppp smells',
-      price: '$4'
+      price: '4',
+      quantity: 0
     },
     {
       id: '5',
@@ -46,7 +50,8 @@ export class DataService {
       productNameURL: 'yeppppp',
       productDescription: 'yeppppp is gross',
       additionalInfo: 'yeppppp smells',
-      price: '$5'
+      price: '5',
+      quantity: 0
     },
   ]
 

@@ -7,6 +7,8 @@
                   <h5 class="card-title">{{product.productName}}</h5>
                   <p class="card-text">{{product.productDescription}}</p>
                   <p class="card-text">{{product.additionalInfo}}</p>
+                  <p>{{product.price}}</p>
+                  <button class ="btn btn-primary" (click) = "addToCart(product)">+</button>
                   <a  routerLink = '/{{product.productNameURL}}/{{product.id}}' href="#" class="btn btn-primary">Buy now for {{product.price}}</a>
                 </div>
               </div>
