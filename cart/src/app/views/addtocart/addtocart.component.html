@@ -11,8 +11,12 @@
             <a>{{cItem.price}}</a>
         </div>
         <div class="col">
-            <button type="button" class="btn btn-info">Info</button>
+            {{cItem.qty}}
+            <button type="button" (click) = "removeItem(cItem)" class="btn btn-info">remove</button>
 
         </div>
+        
     </div>
+    <button type="button" (click) = "removeCartItems()" class="btn btn-primary">Remove All Items</button>
+
 </div>
